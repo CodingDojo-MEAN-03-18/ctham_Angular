@@ -36,16 +36,15 @@ const myObj2 = { x: 5, y: 10 };
 //     };
 //     return MyNode;
 // }());
-class MyNode = (function () {
-    function MyNode(val) {
-        this.val = 0;
-        this.val = val;
+class MyNode {
+    private _priv: number;
+  
+    constructor(public val: number) {}
+  
+    doSomething(): void {
+      this._priv = 10;
     }
-    MyNode.prototype.doSomething = function () {
-        this._priv = 10;
-    };
-    return MyNode;
-}());
+  }
 
 // myNodeInstance = new MyNode(1);
 // console.log(myNodeInstance.val);
@@ -56,12 +55,12 @@ class MyNode = (function () {
 // function sendingErrors() {
 // 	throw new Error('Error message');
 // }
-function myNodeInstance = new MyNode(1);
+const myNodeInstance = new MyNode(1);
 console.log(myNodeInstance.val);
-function myFunction() {
+function myFunction(): void {
     console.log("Hello World");
     return;
 }
-function sendingErrors() {
+function sendingErrors(): void {
 	throw new Error('Error message');
 }
