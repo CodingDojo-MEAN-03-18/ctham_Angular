@@ -7,10 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Retro Barcode Generator';
-  colour = randColor();
 
   arrayColor: string[] = arrayColor();
-
 }
 
 function randColor() {
@@ -20,6 +18,7 @@ function randColor() {
     (Math.floor(Math.random() * 255)) + ',' +
     (Math.floor(Math.random() * 255)) + ')';
 
+  console.log(colour);
   return colour;
 }
 
