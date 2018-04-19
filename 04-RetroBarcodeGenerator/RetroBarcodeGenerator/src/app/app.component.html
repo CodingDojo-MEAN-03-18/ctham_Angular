@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <meta http-equiv="refresh" content="5" >
+    <div *ngFor='let colour of arrayColor' [ngStyle]="{ 'background-color': colour,  'display': 'inline-block', 'width': '150px', 'height': '150px'}"><br><br><br>{{ colour }}</div>
+  </div>
+</div>
+
