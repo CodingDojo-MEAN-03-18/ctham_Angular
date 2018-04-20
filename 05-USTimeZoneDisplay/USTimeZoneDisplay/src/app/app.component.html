@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <button id="aButton" [ngClass]="{ 'on': switch.psd }" (click)="onButtonClick('psd')">PSD</button>
+    <button id="aButton" [ngClass]="{ 'on': switch.mst }" (click)="onButtonClick('mst')">MST</button>
+    <button id="aButton" [ngClass]="{ 'on': switch.cst }" (click)="onButtonClick('cst')">CST</button>
+    <button id="aButton" [ngClass]="{ 'on': switch.est }" (click)="onButtonClick('est')">EST</button>
+    <br><br>
+    <button id="aButton" [ngClass]="{ 'on': switch.now }" (click)="onButtonClick('now')">Clear</button>
+  </div>
+  <h2>
+    <!-- {{ timeZone }} -->
+    <span>{{ currentTime | date: 'medium' : timeZone }}</span>
+  </h2>
+    <br>
+    <span>TimeZone = {{ timeZone }}</span>
+    <br>
+    <span>UTC = {{ utcTime }}</span>
+
+</div>
+
+

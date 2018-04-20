@@ -1,0 +1,11 @@
+* {
+  text-align: center;
+}
+
+.on { background-color: yellow; }
+
+#aButton {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
