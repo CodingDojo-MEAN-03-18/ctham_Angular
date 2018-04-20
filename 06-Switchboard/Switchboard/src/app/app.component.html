@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div >
+    <div class='container' *ngFor='let switch of switchArray, let idx = index'>
+      <button class='box' (click)="onButtonClick(idx)" [ngStyle]="{ 'background-color': switch===true ? 'green' : 'red' }">
+        <span *ngIf='switch'>ON</span>
+        <span *ngIf='!switch'>OFF</span>
+      </button>
+    </div>
+  </div>
+</div>
