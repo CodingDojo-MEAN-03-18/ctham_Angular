@@ -1,0 +1,49 @@
+.ng-invalid { }
+.ng-valid { }
+.ng-untouched { }
+.ng-touched { }
+.ng-dirty { }
+.ng-pristine { }
+
+/* * {
+  outline: 1px dotted red;
+} */
+
+.container {
+  width: 700px;
+  text-align: center;
+  margin: 0px auto;
+}
+.row {
+  width: 100%;
+  display: inline-block;
+  margin: 0px 0px 5px 0px;
+}
+.col1 {
+  width: 30%;
+  display: inline-block;
+  margin-top: 0px;
+  text-align: right;
+}
+.col2 {
+  width: 30%;
+  display: inline-block;
+  margin-top: 0px;
+}
+.col3 {
+  width: 30%;
+  display: inline-block;
+  margin-top: 0px;
+  text-align: left;
+  color: red;
+}
+input {
+  width: 90%;
+}
+button {
+  width: 95%;
+  margin: 10px 0px;
+  padding: 3px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

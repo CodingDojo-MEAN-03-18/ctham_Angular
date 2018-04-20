@@ -1,0 +1,69 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <fieldset>
+      <p>Thank you for registering with us, {{firstname}}. We just send you a confirmation email at {{email}}, and we will send all mails to {{address}} {{unit}}, {{city}} {{state}}.</p>
+      <p>Have a wonderful day!</p>
+    </fieldset>
+  </div>
+  <fieldset>
+    <legend>Accountion Information</legend>
+    <form>
+      <div class="row">
+        <div class="col1">* First Name:</div>
+        <div class="col2"><input type="text" name="firstname" [(ngModel)]="user.firstname" #firstname="ngModel" required/></div>
+        <div class="col3">{{err_firstname}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* Last Name:</div>
+        <div class="col2"><input type="text" name="lastname" [(ngModel)]="user.lastname" #lastname="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* Email:</div>
+        <div class="col2"><input type="text" name="email" [(ngModel)]="user.email" #email="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* Password:</div>
+        <div class="col2"><input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* Password Confirmation:</div>
+        <div class="col2"><input type="password" name="password2" [(ngModel)]="user.password2" #password2="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* Street Address:</div>
+        <div class="col2"><input type="text" name="address" [(ngModel)]="user.address" #address="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">Unit/Apt No:</div>
+        <div class="col2"><input type="text" name="unit" [(ngModel)]="user.unit" #unit="ngModel"/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* City:</div>
+        <div class="col2"><input type="text" name="city" [(ngModel)]="user.city" #city="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* State:</div>
+        <div class="col2"><input type="text" name="state" [(ngModel)]="user.state" #state="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+      <div class="row">
+        <div class="col1">* I'm feeling lucky:</div>
+        <div class="col2"><input type="text" name="lucky" [(ngModel)]="user.lucky" #lucky="ngModel" required/></div>
+        <div class="col3">{{err_}}</div>
+      </div>
+    </form>
+  </fieldset>
+  <button type="submit"><p>Register</p></button>
+</div>
+
