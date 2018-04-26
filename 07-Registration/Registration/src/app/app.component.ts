@@ -11,7 +11,9 @@ export class AppComponent {
   title = 'Registration';
 
   user: User = new User();
+  curr: User = new User();
   users: Array<User> = [];
+  message: Boolean = false;
 
   onSubmit(event: Event, userForm: NgForm) {
     console.log('****', userForm.value);
@@ -19,8 +21,10 @@ export class AppComponent {
     const { value, valid } = userForm;
     console.log(this.user);
 
+    this.curr = this.user;
     this.users.push(this.user);
     this.user = new User();
     userForm.reset();
+    this.message = true;
   }
 }

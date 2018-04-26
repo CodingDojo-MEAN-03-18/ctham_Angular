@@ -3,15 +3,15 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <div>
+  <div *ngIf="message">
     <fieldset>
-      <p>Thank you for registering with us, {{firstname}}. We just send you a confirmation email at {{email}}, and we will send
-        all mails to {{address}} {{unit}}, {{city}} {{state}}.</p>
+      <p>Thank you for registering with us, {{curr.firstname}}. We just send you a confirmation email at {{curr.email}}, and
+        we will send all mails to {{curr.address}} {{curr.unit}}, {{curr.city}} {{curr.state}}.</p>
       <p>Have a wonderful day!</p>
     </fieldset>
   </div>
   <fieldset>
-    {{ userForm.valid | json }}
+    <!-- {{ userForm.valid | json }} -->
     <legend>Accountion Information</legend>
     <form (submit)="onSubmit($event, userForm)" #userForm='ngForm'>
       <div class="row">
@@ -151,18 +151,18 @@
         <div class="col1">* I'm feeling lucky:</div>
         <div class="col2">
           <label class="selectBoolean">
-            <input type="radio" name="lucky" value="Yes" [(ngModel)]="user.lucky" #lucky="ngModel" required/>Yes
+            <input type="radio" name="lucky" value="true" [(ngModel)]="user.lucky" #lucky="ngModel" required/>Yes
           </label>
           <label class="selectBoolean">
-            <input type="radio" name="lucky" value="No" [(ngModel)]="user.lucky" #lucky="ngModel" required/>No
+            <input type="radio" name="lucky" value="false" [(ngModel)]="user.lucky" #lucky="ngModel" required/>No
           </label>
         </div>
         <div class="col3">
-          <span *ngIf="lucky.invalid && lucky.touched">Are you lucky today</span>
+          <span *ngIf="lucky.invalid && lucky.touched">Are you lucky today?</span>
         </div>
       </div>
+      <button type="submit" *ngIf='userForm.valid'>Register</button>
+      <button type="submit" disabled *ngIf='userForm.invalid'>Register</button>
     </form>
   </fieldset>
-  <button type="submit" *ngIf='userForm.valid'>Register</button>
-  <button type="submit" disabled *ngIf='userForm.invalid'>Register</button>
 </div>

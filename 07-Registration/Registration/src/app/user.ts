@@ -10,7 +10,7 @@ export class User {
     public unit: string = '',
     public city: string = '',
     public state: string = '',
-    public lucky: boolean = true,
+    public lucky: boolean,
     public createdAt: Date = new Date(),
     public updatedAt: Date = new Date()
   ) {}
