@@ -1,0 +1,13 @@
+/* * {
+  outline: 1px dotted red;
+} */
+.row {
+  display: inline-block;
+  width: 800px;
+}
+.col {
+  display: inline-block;
+  width: 200px;
+  margin: 0px auto;
+  vertical-align: top;
+}
