@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div class="row">
+    <fieldset>
+      <legend>{{ title }}</legend>
+      <form (submit)="onSubmit($event, powerform)" #powerform='ngForm'>
+        Initial Power Lovel:
+        <input type="number" name="userpower" value="1" min="1" max="100" required [(ngModel)]="userpower">
+        <button type="submit">Calculate Power</button>
+      </form>
+      <br>
+      <br>
+      <app-sub [submypower]="mypowerlevels" [subuser]="userpower"></app-sub>
+      <br>
+      <br>
+    </fieldset>
+  </div>
+</div>

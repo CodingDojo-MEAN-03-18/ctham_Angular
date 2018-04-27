@@ -1,0 +1,11 @@
+<div class="col" *ngFor="let x of submypower; let i = index">
+  <fieldset>
+    <legend>[{{x.title}}]</legend>
+    Power Level: {{x.level*subuser}} ({{x.level}}x{{subuser}})
+    <br>
+    <h3 *ngIf='(x.level*subuser <= 9000 || x.level*subuser > 50000)'>&nbsp;</h3>
+    <h3 *ngIf='(x.level*subuser > 9000 && x.level*subuser <= 20000)'>Over 9000!</h3>
+    <h3 *ngIf='(x.level*subuser > 20000 && x.level*subuser < 50000)'>Superlative!</h3>
+    <h3 *ngIf='(x.level*subuser == 50000)'>The One</h3>
+  </fieldset>
+</div>
