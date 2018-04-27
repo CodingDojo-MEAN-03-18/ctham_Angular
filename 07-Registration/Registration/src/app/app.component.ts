@@ -10,8 +10,9 @@ import { User } from './user';
 export class AppComponent {
   title = 'Registration';
 
+  // user: User = new User('', '', '', '', '', '', '', '', '', false);
   user: User = new User();
-  curr: User = new User();
+  curr: User;
   users: Array<User> = [];
   message: Boolean = false;
 
