@@ -31,15 +31,24 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-.green {
+.greenB {
   background-color: #4caf50;
   color: white;
 }
-.red {
+.redB {
   background-color: #f44336;
   color: white;
 }
-.gray {
+.grayB {
   background-color: #e7e7e7;
+  color: black;
+}
+.greenF {
+  color: #4caf50;
+}
+.redF {
+  color: #f44336;
+}
+.grayB {
   color: black;
 }

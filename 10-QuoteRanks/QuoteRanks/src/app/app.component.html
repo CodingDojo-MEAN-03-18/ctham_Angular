@@ -13,7 +13,7 @@
           <br> Author
           <input type="text" name="qArthor" [(ngModel)]='myQuote.arthor' #qArthor="ngModel" minlength="1" required>
           <br>
-          <input type="hidden" name="qVote" ng-init="qVote = 0" value="0" [(ngModel)]='myQuote.vote' #qVote="ngModel">
+          <input type="hidden" name="qVote" ng-init="qVote = 0" [(ngModel)]='myQuote.vote' #qVote="ngModel">
           <input type="submit" value="Submit" [disabled]="quoteform.invalid">
         </form>
       </fieldset>
@@ -29,6 +29,6 @@
   </div>
   <br>
   <div id="row">
-    <app-sub [subQuotes]="myQuotes"></app-sub>
+    <app-sub [subQuotes]="myQuotes" (onDelete)="onDelete($event)"></app-sub>
   </div>
 </div>

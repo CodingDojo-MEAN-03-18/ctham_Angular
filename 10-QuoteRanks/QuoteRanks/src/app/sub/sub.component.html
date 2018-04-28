@@ -1,4 +1,4 @@
-<h2>Quotes List</h2>
+<h2 *ngIf="subQuotes.length > 0">Quotes List</h2>
 <div *ngFor="let x of subQuotes; let i = index">
   <fieldset>
     <div id="row">
@@ -7,12 +7,14 @@
         <p>- {{x.qArthor}}</p>
       </div>
       <div id="col2">
-        {{x.qVote}}
+        <span class="greenF" *ngIf="x.qVote > 0">+{{x.qVote}}</span>
+        <span class="redF" *ngIf="x.qVote < 0">{{x.qVote}}</span>
+        <span class="greyF" *ngIf="x.qVote == 0">{{x.qVote}}</span>
       </div>
       <div id="col3">
-        <button class="button green">Vote Up</button>
-        <button class="button red">Vote Down</button>
-        <button class="button gray">Delete</button>
+        <button class="button greenB" (click)='onUp(x)'>Vote Up</button>
+        <button class="button redB" (click)='onDown(x)'>Vote Down</button>
+        <button class="button grayB" (click)='onDelete(x)'>Delete</button>
       </div>
     </div>
   </fieldset>

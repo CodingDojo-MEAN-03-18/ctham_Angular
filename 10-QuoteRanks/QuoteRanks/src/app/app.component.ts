@@ -14,11 +14,19 @@ export class AppComponent {
   myQuotes: Array<Quote> = [];
 
   onSubmit(event: Event, addform: NgForm) {
-    console.log('***');
+    console.log('*** onSubmit');
     console.log(addform.value);
+
     this.myQuotes.push(addform.value);
     console.log(this.myQuotes);
-    addform.reset();
+
     this.myQuote = new Quote();
+    addform.reset();
+  }
+
+  onDelete(event: Event, quote) {
+    console.log('*** onDelete');
+    const index = this.myQuotes.indexOf(quote);
+    this.myQuotes.splice(index, 1);
   }
 }

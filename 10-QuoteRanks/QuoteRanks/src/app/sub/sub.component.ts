@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -8,8 +8,24 @@ import { Quote } from '../quote';
 })
 export class SubComponent implements OnInit {
   @Input() subQuotes;
+  @Output() delSubQuote = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  onUp(subQuotes) {
+    console.log('***** onUp');
+    subQuotes.qVote++;
+  }
+
+  onDown(subQuotes) {
+    console.log('***** onDown');
+    subQuotes.qVote--;
+  }
+
+  onDelete(subQuotes) {
+    console.log('***** onDelete');
+    this.delSubQuote.emit(subQuotes);
+  }
 }

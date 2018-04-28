@@ -1,5 +1,5 @@
 export class Quote {
   message: string;
   arthor: string;
-  vote: number;
+  vote = 0;
 }
