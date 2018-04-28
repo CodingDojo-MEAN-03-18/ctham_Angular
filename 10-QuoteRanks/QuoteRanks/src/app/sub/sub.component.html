@@ -14,7 +14,7 @@
       <div id="col3">
         <button class="button greenB" (click)='onUp(x)'>Vote Up</button>
         <button class="button redB" (click)='onDown(x)'>Vote Down</button>
-        <button class="button grayB" (click)='onDelete(x)'>Delete</button>
+        <button class="button grayB" (click)='onDelete($event, x)'>Delete</button>
       </div>
     </div>
   </fieldset>

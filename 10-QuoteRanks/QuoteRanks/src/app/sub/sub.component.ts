@@ -12,7 +12,9 @@ export class SubComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('***** ngOnInit');
+  }
 
   onUp(subQuotes) {
     console.log('***** onUp');

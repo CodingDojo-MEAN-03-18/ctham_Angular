@@ -20,11 +20,14 @@ export class AppComponent {
     this.myQuotes.push(addform.value);
     console.log(this.myQuotes);
 
+    this.myQuotes.sort((q1, q2) => q2.vote - q1.vote);
+    console.log('after sorted', this.myQuotes);
+
     this.myQuote = new Quote();
     addform.reset();
   }
 
-  onDelete(event: Event, quote) {
+  onSubDelete(event: Event, quote) {
     console.log('*** onDelete');
     const index = this.myQuotes.indexOf(quote);
     this.myQuotes.splice(index, 1);
