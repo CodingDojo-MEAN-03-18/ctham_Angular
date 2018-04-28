@@ -1,0 +1,19 @@
+<h2>Quotes List</h2>
+<div *ngFor="let x of subQuotes; let i = index">
+  <fieldset>
+    <div id="row">
+      <div id="col1">
+        <p>"{{x.qMessage}}"</p>
+        <p>- {{x.qArthor}}</p>
+      </div>
+      <div id="col2">
+        {{x.qVote}}
+      </div>
+      <div id="col3">
+        <button class="button green">Vote Up</button>
+        <button class="button red">Vote Down</button>
+        <button class="button gray">Delete</button>
+      </div>
+    </div>
+  </fieldset>
+</div>

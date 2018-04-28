@@ -1,0 +1,22 @@
+/* * {
+  outline: 1px dotted red;
+} */
+#container {
+  width: 900px;
+}
+#row {
+  width: 100%;
+}
+#col1 {
+  width: 70%;
+  display: inline-block;
+}
+#col2 {
+  width: 25%;
+  display: inline-block;
+  color: red;
+  vertical-align: top;
+}
+#right {
+  text-align: right;
+}

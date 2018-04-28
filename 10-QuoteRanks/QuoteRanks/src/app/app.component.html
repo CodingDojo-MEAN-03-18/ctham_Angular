@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="container">
+  <div id="row">
+    <h1>Welcome to {{ title }}!</h1>
+  </div>
+  <div id="row">
+    <div id="col1">
+      <fieldset>
+        <legend>Add a Quote</legend>
+        <form id="right" (submit)="onSubmit($event, quoteform)" #quoteform="ngForm">
+          <textarea type="text" name="qMessage" rows="7" cols="90" [(ngModel)]='myQuote.message' #qMessage="ngModel" minlength="4"
+            required></textarea>
+          <br> Author
+          <input type="text" name="qArthor" [(ngModel)]='myQuote.arthor' #qArthor="ngModel" minlength="1" required>
+          <br>
+          <input type="hidden" name="qVote" ng-init="qVote = 0" value="0" [(ngModel)]='myQuote.vote' #qVote="ngModel">
+          <input type="submit" value="Submit" [disabled]="quoteform.invalid">
+        </form>
+      </fieldset>
+    </div>
+    <div id="col2">
+      <div id="row">
+        <br>
+        <span *ngIf="qMessage.touched && qMessage.invalid">Quote is required. Minimum length 4 characters.</span>
+        <br>
+        <span *ngIf="qArthor.touched && qArthor.invalid">Author is required. Minimum length 1 character.</span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="row">
+    <app-sub [subQuotes]="myQuotes"></app-sub>
+  </div>
+</div>
