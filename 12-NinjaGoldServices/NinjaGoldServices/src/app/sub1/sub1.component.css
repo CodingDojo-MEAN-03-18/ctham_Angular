@@ -1,0 +1,14 @@
+/* * {
+  outline: 1px dotted red;
+} */
+
+#row {
+  width: 100%;
+  display: inline-block;
+}
+#col {
+  width: 25%;
+  display: inline-block;
+  margin: 0px auto;
+  vertical-align: top;
+}

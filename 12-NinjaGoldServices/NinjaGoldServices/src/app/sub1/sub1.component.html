@@ -1,0 +1,10 @@
+<div id="row">
+  <fieldset>
+    <div id="col" *ngFor="let x of building">
+      <fieldset>
+        <legend>[ {{ x.buildingName }} ]</legend>
+        <app-sub11 [subBuilding]="x" (earn)="onSubEarn($event)"></app-sub11>
+      </fieldset>
+    </div>
+  </fieldset>
+</div>

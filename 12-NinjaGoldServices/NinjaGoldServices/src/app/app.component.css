@@ -1,0 +1,9 @@
+/* * {
+  outline: 1px dotted red;
+} */
+
+#container {
+  width: 900px;
+  text-align: center;
+  margin: 0px auto;
+}
