@@ -15,8 +15,16 @@ export class AppComponent {
 
   constructor(private _dataService: DataService) {}
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
-    console.log('*** main=', this.totalGold, this.totalLog);
-
+    console.log('*** main OnInit');
+  }
+  onSubEarn(subEarn) {
+    // console.log('*** main', subEarn);
+    this.totalGold = subEarn;
+  }
+  onSubLog(subLog) {
+    // console.log('*** main', subLog);
+    this.totalLog = subLog;
   }
 }

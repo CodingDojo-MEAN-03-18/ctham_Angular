@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { DataService } from '../data.service';
 
@@ -8,23 +8,15 @@ import { DataService } from '../data.service';
   styleUrls: ['./sub2.component.css']
 })
 export class Sub2Component implements OnInit {
-  // totalGold = 0;
-  // totalLog = [];
+  @Input() sub2Log;
 
   constructor(private _dataService: DataService) {}
 
   ngOnInit() {
-    console.log(
-      '*** sub2 OnInit = ',
-      this._dataService.totalLog,
-      this._dataService.totalGold
-    );
+    console.log('*** sub2 OnInit');
   }
-  ngOnChange() {
-    console.log(
-      '*** sub2 OnChange = ',
-      this._dataService.totalLog,
-      this._dataService.totalGold
-    );
-  }
+
+  // triggerEvent() {
+  //   console.log('*** sub2 triggerEvent');
+  // }
 }

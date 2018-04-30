@@ -1,7 +1,7 @@
 <div id="row">
   <div id="row">
-    <p *ngIf="subBuilding.levelMin>0">Earns {{ subBuilding.levelMin }} to {{ subBuilding.levelMax }} Gold</p>
-    <p *ngIf="subBuilding.levelMin<0">Earn up or Lost up to {{ subBuilding.levelMax }} Gold</p>
+    <p *ngIf="sub1Building.levelMin>0">Earns {{ sub1Building.levelMin }} to {{ sub1Building.levelMax }} Gold</p>
+    <p *ngIf="sub1Building.levelMin<0">Earn up or Lost up to {{ sub1Building.levelMax }} Gold</p>
   </div>
-  <button id="button" (click)="onButton(subBuilding.no)">{{ subBuilding.buildingName }}</button>
+  <button id="button" (click)="onButton(sub1Building.no)">{{ sub1Building.buildingName }}</button>
 </div>

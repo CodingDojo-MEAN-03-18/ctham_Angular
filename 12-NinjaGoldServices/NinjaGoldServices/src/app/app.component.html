@@ -12,8 +12,10 @@
       </fieldset>
     </div>
     <div>
-      <app-sub1></app-sub1>
-      <app-sub2></app-sub2>
+      <app-sub1 (sub1Earn)="onSubEarn($event)" (sub1Log)="onSubLog($event)"></app-sub1>
+    </div>
+    <div>
+      <app-sub2 [sub2Log]="totalLog"></app-sub2>
     </div>
   </div>
 </div>

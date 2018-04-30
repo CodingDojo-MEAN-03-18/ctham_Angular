@@ -3,7 +3,7 @@
     <div id="col" *ngFor="let x of building">
       <fieldset>
         <legend>[ {{ x.buildingName }} ]</legend>
-        <app-sub11 [subBuilding]="x" (earn)="onSubEarn($event)"></app-sub11>
+        <app-sub11 [sub1Building]="x" (sub11Earn)="onSub1Earn($event)" (sub11Log)="onSub1Log($event)"></app-sub11>
       </fieldset>
     </div>
   </fieldset>
