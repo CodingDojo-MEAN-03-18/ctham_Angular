@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="container">
+  <div>
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <div>
+    <fieldset>
+      <div id="col">
+        <app-sub1 (sub1Score)="onSub1Score($event)"></app-sub1>
+      </div>
+      <div id="col">
+        <app-sub2 [totalScore]="Sub2Score"></app-sub2>
+      </div>
+    </fieldset>
+  </div>
+</div>

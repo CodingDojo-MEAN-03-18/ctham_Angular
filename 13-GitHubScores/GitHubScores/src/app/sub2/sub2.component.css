@@ -1,0 +1,23 @@
+/* * {
+  outline: 1px dotted red;
+} */
+.red {
+  background-color: red;
+  color: white;
+}
+.orange {
+  background-color: orange;
+  color: white;
+}
+.black {
+  background-color: black;
+  color: white;
+}
+.green {
+  background-color: green;
+  color: white;
+}
+.blue {
+  background-color: blue;
+  color: white;
+}

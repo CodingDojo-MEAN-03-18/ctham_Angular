@@ -1,0 +1,13 @@
+<h3>
+  Your Score: {{ totalScore }}
+</h3>
+<h4>
+  <div *ngFor="let x of calculation">
+    <span class={{x.color}} *ngIf='totalScore > x.scoreMin  && totalScore < x.scoreMax'>{{x.scoreMsg}}</span>
+  </div>
+  <!-- <span class='red' *ngIf='totalScore > 0 && totalScore < 20'>Needs work!</span>
+  <span class='orange' *ngIf='totalScore >= 20 && totalScore < 50'>A decent start!</span>
+  <span class='black' *ngIf='totalScore >= 50 && totalScore < 100'>Doing good!</span>
+  <span class='green' *ngIf='totalScore >= 100 && totalScore < 200'>Great job!</span>
+  <span class='blue' *ngIf='totalScore >= 200 && totalScore < 99999'>GitHub Elite!</span> -->
+</h4>

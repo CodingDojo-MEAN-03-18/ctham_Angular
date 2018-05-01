@@ -1,0 +1,12 @@
+<form>
+  <br> GitHub Username:
+  <input type="text" #username>
+  <br>
+  <br>
+  <span id='red'>{{ errorMsg }}</span>
+  <br>
+  <button (click)='onClick(username.value)'>Calculate GitHub Score</button>
+  <br>
+  <br>
+  <br>
+</form>
