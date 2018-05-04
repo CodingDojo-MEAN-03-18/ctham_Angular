@@ -15,9 +15,9 @@ export class AppComponent {
 
   onSubmit(event: Event, addform: NgForm) {
     console.log('*** onSubmit');
-    console.log(addform.value);
+    this.myQuote.vote = 0;
 
-    this.myQuotes.push(addform.value);
+    this.myQuotes.push(this.myQuote);
     console.log(this.myQuotes);
 
     this.myQuotes.sort((q1, q2) => q2.vote - q1.vote);

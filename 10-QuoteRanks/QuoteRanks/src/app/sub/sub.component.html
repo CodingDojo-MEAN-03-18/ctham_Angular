@@ -3,13 +3,13 @@
   <fieldset>
     <div id="row">
       <div id="col1">
-        <p>"{{x.qMessage}}"</p>
-        <p>- {{x.qArthor}}</p>
+        <p>"{{x.message}}"</p>
+        <p>- {{x.arthor}}</p>
       </div>
       <div id="col2">
-        <span class="greenF" *ngIf="x.qVote > 0">+{{x.qVote}}</span>
-        <span class="redF" *ngIf="x.qVote < 0">{{x.qVote}}</span>
-        <span class="greyF" *ngIf="x.qVote == 0">{{x.qVote}}</span>
+        <span class="greenF" *ngIf="x.vote > 0">+{{x.vote}}</span>
+        <span class="redF" *ngIf="x.vote < 0">{{x.vote}}</span>
+        <span class="greyF" *ngIf="x.vote == 0">{{x.vote}}</span>
       </div>
       <div id="col3">
         <button class="button greenB" (click)='onUp(x)'>Vote Up</button>

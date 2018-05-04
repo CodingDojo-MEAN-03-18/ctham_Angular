@@ -18,12 +18,12 @@ export class SubComponent implements OnInit {
 
   onUp(subQuotes) {
     console.log('***** onUp');
-    subQuotes.qVote++;
+    subQuotes.vote++;
   }
 
   onDown(subQuotes) {
     console.log('***** onDown');
-    subQuotes.qVote--;
+    subQuotes.vote--;
   }
 
   onDelete(subQuotes) {
