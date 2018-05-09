@@ -1,0 +1,29 @@
+* {
+  /* outline: 1px dotted red; */
+}
+
+#container {
+  width: 900px;
+  margin: 0px auto;
+}
+
+#formTop {
+  width: 600px;
+}
+
+legend {
+  display: block;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 200px;
+}
+
+#red {
+  color: red;
+}
