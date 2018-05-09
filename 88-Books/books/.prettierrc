@@ -1,0 +1,10 @@
+{
+  "overriddes": [{
+    "files": ".prettierrc",
+    "options": {
+      "parser": "json"
+    }
+  }],
+  "printWidth": 80,
+  "singleQuote": true
+}
