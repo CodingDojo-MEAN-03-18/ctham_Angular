@@ -3,10 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '../../book';
 import { BOOKS } from '../../data/book-data';
 
+import { TitleizePipe } from '../../titleize.pip';
+
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
-  styleUrls: ['../../app.component.css', './book-list.component.css']
+  styleUrls: ['../../app.component.css', './book-list.component.css'],
+  providers: [TitleizePipe]
 })
 export class BookListComponent implements OnInit {
   selectedBook: Book;
@@ -14,9 +17,14 @@ export class BookListComponent implements OnInit {
   // books: Array<Book> = [];
   books: Array<Book> = BOOKS;
 
-  constructor() {}
+  constructor(private titleize: TitleizePipe) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.books.forEach(book => {
+      book.title = this.titleize.transform(book.title);
+      book.author = this.titleize.transform(book.author);
+    });
+  }
 
   selectBook(book: Book): void {
     console.log('selectBook', book);
