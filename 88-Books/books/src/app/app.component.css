@@ -2,13 +2,14 @@
   /* outline: 1px dotted red; */
 }
 
-#container {
+.container {
   width: 900px;
   margin: 0px auto;
 }
 
-#formTop {
-  width: 600px;
+.formBox {
+  width: 700px;
+  margin: 0px auto;
 }
 
 legend {
@@ -22,6 +23,18 @@ label {
 
 input {
   width: 200px;
+}
+
+table,
+th {
+  border-bottom: 1px solid black;
+}
+
+th,
+td {
+  width: auto;
+  padding: 0px 15px;
+  text-align: center;
 }
 
 #red {

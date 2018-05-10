@@ -1,5 +1,5 @@
-<div id='container'>
-  <div id="formTop">
+<div class='container'>
+  <div class="formBox">
     <fieldset>
       <legend>Create a New Book</legend>
       <form (submit)='onSubmit($event, bookForm)' #bookForm='ngForm'>
@@ -54,3 +54,38 @@
     </fieldset>
   </div>
 </div>
+
+<section class='container'>
+  <div class="formBox">
+    <fieldset>
+      <legend>List of Books</legend>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <!-- <th>Author</th> -->
+            <th>Year</th>
+            <th>Author</th>
+            <!-- <th>Pages</th> -->
+            <!-- <th>Publisher</th> -->
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor='let book of books' (click)='selectBook(book)'>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <!-- <td>{{ book.author }}</td> -->
+            <td>{{ book.year }}</td>
+            <td>{{ book.author }}</td>
+            <!-- <td>{{ book.pages }}</td> -->
+            <!-- <td>{{ book.publisher }}</td> -->
+            <td>Future Action</td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+  </div>
+</section>
