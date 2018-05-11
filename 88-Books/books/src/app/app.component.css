@@ -8,7 +8,7 @@
 }
 
 .formBox {
-  width: 700px;
+  width: 800px;
   margin: 0px auto;
 }
 
@@ -24,7 +24,8 @@ label {
 }
 
 input {
-  width: 200px;
+  /* width: 200px; */
+  width: auto;
 }
 
 #red {

@@ -8,7 +8,7 @@ export class TitleizePipe implements PipeTransform {
   static skipWords = ['of', 'the', 'in', 'a'];
 
   transform(value: string, args?: string[] | boolean) {
-    console.log('titleize', value);
+    // console.log('titleize', value);
 
     if (typeof value !== 'string') {
       return value;
@@ -20,7 +20,8 @@ export class TitleizePipe implements PipeTransform {
     const processSkipWords = args !== false;
 
     return value.replace(/\w[^-\s]*/g, (word, index: number) => {
-      console.log('word', word, index);
+      // console.log('word', word, index);
+
       // if (word in skipWords) {
       // if (skipWords.indexOf(word.toLowerCase()) !== -1) {
       if (

@@ -9,8 +9,9 @@ import { BookNewComponent } from './books/book-new/book-new.component';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
 
 import { TitleizePipe } from './titleize.pip';
+import { SearchPipe } from './search.pipe';
 
-TitleizePipe.skipWords = ['of'];
+// TitleizePipe.skipWords = ['of'];
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ TitleizePipe.skipWords = ['of'];
     BookListComponent,
     BookNewComponent,
     BookDetailComponent,
-    TitleizePipe
+    TitleizePipe,
+    SearchPipe
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

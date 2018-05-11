@@ -16,6 +16,7 @@ export class BookListComponent implements OnInit {
 
   // books: Array<Book> = [];
   books: Array<Book> = BOOKS;
+  filter: Book = new Book(false);
 
   constructor(private titleize: TitleizePipe) {}
 
@@ -42,5 +43,10 @@ export class BookListComponent implements OnInit {
   onCreate(event: Book) {
     console.log('onCreate', event);
     this.books.push(event);
+  }
+
+  clearFilter(): void {
+    // console.log('clearFilter');
+    this.filter = new Book(false);
   }
 }
