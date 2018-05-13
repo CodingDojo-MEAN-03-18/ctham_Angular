@@ -5,6 +5,7 @@ import * as fromBooks from './books';
 
 import { BookListComponent } from './books/book-list/book-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BookResolve } from './resolvers';
 
 const routes: Routes = [
   {
@@ -27,7 +28,10 @@ const routes: Routes = [
       },
       {
         path: ':bookID',
-        component: fromBooks.BookDetailComponent
+        component: fromBooks.BookDetailComponent,
+        resolve: {
+          book: BookResolve
+        }
       }
     ]
   },
