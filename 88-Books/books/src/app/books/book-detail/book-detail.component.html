@@ -1,4 +1,7 @@
 <section class='container' *ngIf='book'>
+  <div class='red' *ngIf='errorMessage'>
+    <p>{{errorMessage}}</p>
+  </div>
   <div class="formBox">
     <fieldset>
       <legend>Selected Book</legend>

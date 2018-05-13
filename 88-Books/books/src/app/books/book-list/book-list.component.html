@@ -1,4 +1,4 @@
-<app-book-new (createBook)='onCreate($event)'></app-book-new>
+<!-- <app-book-new (createBook)='onCreate($event)'></app-book-new> -->
 
 <section class='container'>
   <div class="formBox">
@@ -31,19 +31,19 @@
             </th>
           </tr>
         </thead>
-
         <tbody>
-          <tr *ngFor='let book of books | search:filter' (click)='selectBook(book)'>
+          <tr *ngFor='let book of books | search:filter' (click)='selectBook(book)' [routerLink]="['/books',book.id]">
+            <!-- <tr *ngFor='let book of books | search:filter' (click)='selectBook(book)' [routerLink]="[book.id]"> -->
             <td>{{ book.id }}</td>
             <!-- <td>{{ book.title | titleize:false }}</td> -->
-            <!-- <td>{{ book.title | titleize:['the','a'] }}</td> -->
+            <!-- <td>{{ book.title | titleize:['the ','a '] }}</td> -->
             <td>{{ book.title }}</td>
             <td>{{ book.year }}</td>
             <td>{{ book.author }}</td>
             <!-- <td>{{ book.pages }}</td> -->
             <!-- <td>{{ book.publisher }}</td> -->
-            <td (click)='onClick($event)'>
-              <button class='btn-red' (click)='onDelete(book.id)'>Delete</button>
+            <td (click)='onClick($event) '>
+              <button class='btn-red ' (click)='onDelete(book.id) '>Delete</button>
             </td>
           </tr>
         </tbody>
@@ -52,4 +52,4 @@
   </div>
 </section>
 
-<app-book-detail [book]='selectedBook'></app-book-detail>
+<!-- <app-book-detail [book]='selectedBook '></app-book-detail> -->
