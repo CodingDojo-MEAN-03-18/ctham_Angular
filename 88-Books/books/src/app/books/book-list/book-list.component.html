@@ -9,25 +9,25 @@
           <tr>
             <th>
               <input type="text" name="" id="" placeholder="ID" [(ngModel)]='filter.id'>
-              <button class='clear' *ngIf='filter.id' (click)='filter.id = null'>x</button>
+              <button class='clear' *ngIf='filter.id' (click)='filter.id = null'>🔍</button>
             </th>
             <th>
               <input type="text" name="" id="" placeholder="Title" [(ngModel)]='filter.title'>
-              <button class='clear' *ngIf='filter.title' (click)='filter.title = null'>x</button>
+              <button class='clear' *ngIf='filter.title' (click)='filter.title = null'>🔍</button>
             </th>
             <!-- <th>Author</th> -->
             <th>
               <input type="text" name="" id="" placeholder="Year" [(ngModel)]='filter.year'>
-              <button class='clear' *ngIf='filter.year' (click)='filter.year = null'>x</button>
+              <button class='clear' *ngIf='filter.year' (click)='filter.year = null'>🔍</button>
             </th>
             <th>
               <input type="text" name="" id="" placeholder="Author" [(ngModel)]='filter.author'>
-              <button class='clear' *ngIf='filter.author' (click)='filter.author = null'>x</button>
+              <button class='clear' *ngIf='filter.author' (click)='filter.author = null'>🔍</button>
             </th>
             <!-- <th>Pages</th> -->
             <!-- <th>Publisher</th> -->
             <th>Actions
-              <button class='clear' (click)='clearFilter()' *ngIf='filter.id || filter.title || filter.year || filter.author'>x</button>
+              <button class='clear' (click)='clearFilter()' *ngIf='filter.id || filter.title || filter.year || filter.author'>🔍</button>
             </th>
           </tr>
         </thead>
@@ -42,7 +42,9 @@
             <td>{{ book.author }}</td>
             <!-- <td>{{ book.pages }}</td> -->
             <!-- <td>{{ book.publisher }}</td> -->
-            <td>Future Action</td>
+            <td (click)='onClick($event)'>
+              <button class='btn-red' (click)='onDelete(book.id)'>Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>

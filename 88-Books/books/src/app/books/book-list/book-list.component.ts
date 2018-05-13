@@ -5,6 +5,8 @@ import { BOOKS } from '../../data/book-data';
 
 import { TitleizePipe } from '../../titleize.pip';
 
+import { BookService } from '../../services/book.service';
+
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -14,17 +16,33 @@ import { TitleizePipe } from '../../titleize.pip';
 export class BookListComponent implements OnInit {
   selectedBook: Book;
 
-  // books: Array<Book> = [];
-  books: Array<Book> = BOOKS;
+  books: Array<Book> = [];
+  // books: Array<Book> = BOOKS;
   filter: Book = new Book(false);
 
-  constructor(private titleize: TitleizePipe) {}
+  constructor(
+    private titleize: TitleizePipe,
+    private bookService: BookService
+  ) {}
 
   ngOnInit() {
-    this.books.forEach(book => {
-      book.title = this.titleize.transform(book.title);
-      book.author = this.titleize.transform(book.author);
+    // this.books = this.bookService.getBooks();
+    this.bookService.getBooks().subscribe(books => {
+      console.log(books);
+      this.books = books;
+
+      this.books.forEach(book => {
+        book.title = this.titleize.transform(book.title);
+        book.author = this.titleize.transform(book.author);
+      });
     });
+
+    // this.books.forEach(book => {
+    //   book.title = this.titleize.transform(book.title);
+    //   book.author = this.titleize.transform(book.author);
+    // });
+
+    // this.bookService.difference$.subscribe();
   }
 
   selectBook(book: Book): void {
@@ -43,6 +61,19 @@ export class BookListComponent implements OnInit {
   onCreate(event: Book) {
     console.log('onCreate', event);
     this.books.push(event);
+  }
+
+  onClick(event: Event) {
+    event.stopPropagation();
+  }
+
+  onDelete(id: number) {
+    console.log('onDelete', id);
+    this.bookService.deleteBook(id).subscribe(returnBook => {
+      console.log('returnBook', returnBook);
+
+      this.books = this.books.filter(b => b.id !== returnBook.id);
+    });
   }
 
   clearFilter(): void {
