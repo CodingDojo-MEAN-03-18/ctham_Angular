@@ -1,9 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 import { Book } from '../../book';
-import { NgForm } from '@angular/forms';
 
 import { BookService } from '../../services/book.service';
 

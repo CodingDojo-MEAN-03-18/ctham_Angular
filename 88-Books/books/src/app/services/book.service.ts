@@ -10,13 +10,14 @@ import { Observable } from 'rxjs/Observable';
 
 import { Book } from '../book';
 
-import { of } from 'rxjs/observable/of';
+// import { of } from 'rxjs/observable/of';
 // import { tap, map } from 'rxjs/operators';
 
 @Injectable()
 export class BookService {
   // private base = 'http://59498bce6d49df0011102cfc.mockapi.io/books';
   private base = 'http://5af7734bc222a90014dbda5e.mockapi.io/books';
+  // private base = '/api/books';
 
   // difference$ = new BehaviorSubject(0);
 
