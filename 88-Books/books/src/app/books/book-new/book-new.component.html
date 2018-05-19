@@ -7,7 +7,7 @@
         <input type="text" name="title" [(ngModel)]='book.title' required minlength="3" #title='ngModel'>
         <!-- ( {{ bookForm.valid | json }} ) -->
         <!-- {{title.touched | json}} {{title.errors | json}} -->
-        <div id='red' *ngIf='title.touched && title.errors'>
+        <div class='red' *ngIf='title.touched && title.errors'>
           <div *ngIf='title.errors.required'>You must enter a title</div>
           <div *ngIf='title.errors.minlength'>A title must at least {{title.errors.minlength.requiredLength | json}} characters. Currently, you have enter {{title.errors.minlength.actualLength
             | json}} character(s)</div>
@@ -16,7 +16,7 @@
       <div>
         <label for="">Author</label>
         <input type="text" name="author" [(ngModel)]='book.author' required minlength="3" #author='ngModel'>
-        <div id='red' *ngIf='author.touched && author.errors'>
+        <div class='red' *ngIf='author.touched && author.errors'>
           <div *ngIf='author.errors.required'>You must enter a author</div>
           <div *ngIf='author.errors.minlength'>A author must at least {{author.errors.minlength.requiredLength | json}} characters. Currently, you have enter
             {{author.errors.minlength.actualLength | json}} character(s)</div>
@@ -25,7 +25,7 @@
       <div>
         <label for="">Year</label>
         <input type="number" name="year" [(ngModel)]='book.year' required min='1800' max='2018' #year='ngModel'>
-        <div id='red' *ngIf='year.touched && year.errors'>
+        <div class='red' *ngIf='year.touched && year.errors'>
           <div *ngIf='year.errors.required'>You must enter a year of the book</div>
           <div *ngIf='year.min'>{{year.min | json}}</div>
         </div>
@@ -33,7 +33,7 @@
       <div>
         <label for="">Pages</label>
         <input type="number" name="pages" [(ngModel)]='book.pages' required min='1' #pages='ngModel'>
-        <div id='red' *ngIf='pages.touched && pages.errors'>
+        <div class='red' *ngIf='pages.touched && pages.errors'>
           <div *ngIf='pages.errors.required'>You must enter a number of pages</div>
           <div *ngIf='pages.min'>{{pages.min | json}}</div>
         </div>
@@ -41,7 +41,7 @@
       <div>
         <label for="">Publisher</label>
         <input type="text" name="publisher" [(ngModel)]='book.publisher' required minlength="3" #publisher='ngModel'>
-        <div id='red' *ngIf='publisher.touched && publisher.errors'>
+        <div class='red' *ngIf='publisher.touched && publisher.errors'>
           <div *ngIf='publisher.errors.required'>You must enter a publisher</div>
           <div *ngIf='publisher.errors.minlength'>A publisher must at least {{publisher.errors.minlength.requiredLength | json}} characters. Currently, you have
             enter {{publisher.errors.minlength.actualLength | json}} character(s)</div>

@@ -28,8 +28,14 @@ input {
   width: auto;
 }
 
-#red {
+.red {
   color: red;
+}
+
+.btnred {
+  background-color: red;
+  color: white;
+  border-radius: 4px;
 }
 
 /* List and Details */
