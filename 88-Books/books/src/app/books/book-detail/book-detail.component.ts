@@ -22,20 +22,22 @@ export class BookDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.paramMap
-      .switchMap(params => this.bookService.getABook(params.get('bookID')))
-      .subscribe(
-        book => {
-          console.log('getABook', book);
-          this.book = book;
-        },
-        error => {
-          console.log('error', error);
-          this.errorMessage = error.statusText;
-          setTimeout(() => {
-            this.errorMessage = null;
-          }, 3000);
-        }
-      );
+    // this.route.paramMap
+    //   .switchMap(params => this.bookService.getABook(params.get('bookID')))
+    //   .subscribe(
+    //     book => {
+    //       console.log('getABook', book);
+    //       this.book = book;
+    //     },
+    //     error => {
+    //       console.log('error', error);
+    //       this.errorMessage = error.statusText;
+    //       setTimeout(() => {
+    //         this.errorMessage = null;
+    //       }, 3000);
+    //     }
+    //   );
+
+    this.book = this.route.snapshot.data.book as Book;
   }
 }

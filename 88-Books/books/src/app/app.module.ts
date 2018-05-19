@@ -24,6 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { BookResolve } from './resolvers';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
-  providers: [BookService],
+  providers: [BookService, BookResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
