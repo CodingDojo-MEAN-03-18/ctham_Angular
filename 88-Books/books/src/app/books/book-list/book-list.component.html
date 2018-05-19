@@ -1,4 +1,4 @@
-<app-book-new (createBook)='onCreate($event)'></app-book-new>
+<!-- <app-book-new (createBook)='onCreate($event)'></app-book-new> -->
 
 <section class='container'>
   <div class="formBox">
@@ -33,7 +33,8 @@
         </thead>
 
         <tbody>
-          <tr *ngFor='let book of books | search:filter' (click)='selectBook(book)'>
+          <!-- <tr *ngFor='let book of books | search:filter' (click)='selectBook(book)' [routerLink]="['books', book.id]"> -->
+          <tr *ngFor='let book of books | search:filter' (click)='selectBook(book)' [routerLink]="book.id">
             <td>{{ book.id }}</td>
             <!-- <td>{{ book.title | titleize:false }}</td> -->
             <!-- <td>{{ book.title | titleize:['the','a'] }}</td> -->
@@ -52,4 +53,4 @@
   </div>
 </section>
 
-<app-book-detail [book]=' selectedBook '></app-book-detail>
+<!-- <app-book-detail [book]=' selectedBook '></app-book-detail> -->
