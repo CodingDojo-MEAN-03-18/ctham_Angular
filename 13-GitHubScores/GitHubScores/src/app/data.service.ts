@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
+import { GithubUser } from './github-user';
+
 @Injectable()
 export class DataService {
   private httpbase = 'https://api.github.com/users/';
