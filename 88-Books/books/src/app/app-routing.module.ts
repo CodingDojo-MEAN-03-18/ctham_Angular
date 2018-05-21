@@ -14,6 +14,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    // /books
     path: 'books',
     // component: fromBooks.BookListComponent,
     children: [

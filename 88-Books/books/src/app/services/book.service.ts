@@ -13,7 +13,8 @@ import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class BookService {
-  private base = 'http://5af7734bc222a90014dbda5e.mockapi.io/books';
+  // private base = 'http://5af7734bc222a90014dbda5e.mockapi.io/books';
+  private base = '/api/books';
 
   // constructor() {}
   constructor(private http: HttpClient) {}
